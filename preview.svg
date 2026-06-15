@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F2E73"/>
+      <stop offset="100%" stop-color="#161D4D"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="85%" cy="15%" r="35%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="10%" cy="85%" r="30%">
+      <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Accent line top -->
+  <rect x="0" y="0" width="1200" height="5" fill="#FF6B35"/>
+
+  <!-- Left accent bar -->
+  <rect x="80" y="160" width="5" height="310" fill="#FF6B35" rx="3"/>
+
+  <!-- CODEGYM wordmark -->
+  <text x="114" y="232" font-family="Arial Black, Arial, sans-serif" font-size="58" font-weight="900" fill="white" letter-spacing="6" opacity="0.95">CODEGYM</text>
+
+  <!-- Tagline under logo -->
+  <text x="116" y="270" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="rgba(255,255,255,0.45)" letter-spacing="5">KIẾN TẠO THẾ HỆ LẬP TRÌNH VIÊN MỚI</text>
+
+  <!-- Divider -->
+  <rect x="116" y="296" width="100" height="2" fill="rgba(255,255,255,0.25)" rx="1"/>
+
+  <!-- Course label -->
+  <text x="116" y="342" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="4">CHƯƠNG TRÌNH ĐÀO TẠO</text>
+
+  <!-- Main title line 1 -->
+  <text x="116" y="408" font-family="Arial Black, Arial, sans-serif" font-size="62" font-weight="900" fill="#FF6B35" letter-spacing="2">AI-NATIVE</text>
+
+  <!-- Main title line 2 -->
+  <text x="116" y="470" font-family="Arial Black, Arial, sans-serif" font-size="62" font-weight="900" fill="white" letter-spacing="2">BOOTCAMP</text>
+
+  <!-- Sub detail -->
+  <text x="116" y="510" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="rgba(255,255,255,0.55)" letter-spacing="1">Java Web Fullstack · 13 tháng · Part-time</text>
+
+  <!-- Right side decorative badge -->
+  <rect x="880" y="200" width="240" height="230" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Badge icon area -->
+  <circle cx="1000" cy="275" r="48" fill="rgba(255,107,53,0.15)" stroke="#FF6B35" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Code brackets symbol -->
+  <text x="1000" y="288" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#FF6B35" text-anchor="middle">&lt;/&gt;</text>
+
+  <!-- Badge texts -->
+  <text x="1000" y="345" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1">FULLSTACK</text>
+  <text x="1000" y="368" font-family="Arial, sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.5)" text-anchor="middle">Java · React · DevOps · AI</text>
+  <text x="1000" y="408" font-family="Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.35)" text-anchor="middle">codegym.vn</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="590" width="1200" height="40" fill="rgba(0,0,0,0.25)"/>
+  <text x="116" y="615" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.4)" letter-spacing="2">codegym.vn</text>
+  <text x="1084" y="615" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.4)" text-anchor="end" letter-spacing="1">JV111 · 2026</text>
+</svg>
