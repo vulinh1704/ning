@@ -826,17 +826,108 @@
 
         @media (max-width: 480px) {
             .slide {
-                padding: 12px 14px 72px;
+                padding: 10px 12px 68px;
             }
 
             .slide-title {
-                font-size: 1.2rem;
+                font-size: 1.15rem;
+                margin-bottom: 6px;
             }
 
-            .rules-grid,
-            .two-column,
+            .slide-accent {
+                height: 4px;
+                margin-bottom: 8px;
+            }
+
+            /* Keep two-column and rules-grid as 2 cols on phone */
             .experience-grid {
                 grid-template-columns: 1fr;
+            }
+
+            /* Info boxes: tighter on phone */
+            .info-box {
+                padding: 8px 10px;
+            }
+
+            .info-label {
+                font-size: 0.64rem;
+                margin-bottom: 4px;
+            }
+
+            .info-content {
+                font-size: 0.82rem;
+                word-break: break-word;
+            }
+
+            /* Profile avatar smaller on phone */
+            .profile-avatar {
+                width: 90px !important;
+                height: 90px !important;
+            }
+
+            /* Experience: horizontal layout on phone */
+            .experience-item {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 10px;
+                padding: 10px 12px;
+                border-top: none;
+                border-left: 3px solid var(--accent);
+            }
+
+            .experience-icon {
+                width: 34px !important;
+                height: 34px !important;
+                font-size: 0.85rem !important;
+                border-radius: 8px !important;
+                margin-bottom: 0 !important;
+                flex-shrink: 0;
+            }
+
+            .experience-title {
+                font-size: 0.82rem;
+                margin-bottom: 3px;
+            }
+
+            .experience-detail {
+                font-size: 0.75rem;
+                line-height: 1.45;
+            }
+
+            /* Rule cards: tighter */
+            .rule-card {
+                padding: 9px 10px;
+            }
+
+            .rule-icon {
+                width: 32px !important;
+                height: 32px !important;
+                font-size: 0.82rem !important;
+                border-radius: 8px !important;
+                margin-bottom: 6px !important;
+            }
+
+            .rule-title {
+                font-size: 0.78rem;
+                margin-bottom: 3px;
+            }
+
+            .rule-content {
+                font-size: 0.78rem;
+            }
+
+            .content-section {
+                margin-bottom: 8px;
+            }
+
+            .section-title {
+                font-size: 0.92rem;
+                margin-bottom: 6px;
+            }
+
+            .highlight-box {
+                padding: 8px 10px;
             }
 
             .cover-title {
@@ -884,7 +975,7 @@
             <h2 class="slide-title">Giảng Viên Hướng Dẫn</h2>
 
             <div class="info-box" style="display: flex; align-items: center; gap: 18px;">
-                <img src="image.png" alt="Trương Đăng Vũ Linh"
+                <img src="image.png" alt="Trương Đăng Vũ Linh" class="profile-avatar"
                      style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); box-shadow: 0 4px 12px rgba(255,107,53,0.25); filter: brightness(1.15) contrast(1.05); flex-shrink: 0;">
                 <div>
                     <span class="info-label" style="font-size: 1rem; margin-bottom: 6px;"><i class="fa-solid fa-user"></i> Họ và tên</span>
