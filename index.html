@@ -83,6 +83,11 @@
             justify-content: flex-start;
         }
 
+        /* Content slides: block layout so position:sticky works correctly */
+        .slide.active:not(.cover-slide) {
+            display: block;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
