@@ -574,6 +574,113 @@
             font-family: 'Be Vietnam Pro', sans-serif;
         }
 
+        /* Skill cards — Slide 4 */
+        .skill-grid-4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .skill-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 22px 20px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 3px 10px rgba(31,46,115,0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .skill-card:nth-child(4) {
+            border-left-color: var(--accent);
+        }
+
+        .skill-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .skill-card-title {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--primary);
+        }
+
+        .skill-card:nth-child(4) .skill-card-title {
+            color: var(--accent-dark);
+        }
+
+        .skill-card-tags {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Module cards — Slide 5 */
+        .module-card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .module-card-item {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            box-shadow: 0 2px 6px rgba(31,46,115,0.07);
+            border-left: 4px solid var(--border);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .module-card-item:hover {
+            border-left-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(31,46,115,0.12);
+        }
+
+        .module-num-badge {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--primary) 0%, #2d3e9e 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .module-card-body {
+            flex: 1;
+        }
+
+        .module-card-name {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+        }
+
+        .module-duration {
+            font-weight: 400;
+            color: var(--accent);
+            font-size: 0.88rem;
+        }
+
+        .module-card-tech {
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .slide-header {
@@ -896,6 +1003,10 @@
                 margin-bottom: 8px;
             }
 
+            .skill-grid-4 {
+                grid-template-columns: 1fr;
+            }
+
             /* Keep two-column and rules-grid as 2 cols on phone */
             .experience-grid {
                 grid-template-columns: 1fr;
@@ -1128,34 +1239,43 @@
         <div class="slide">
             <div class="slide-accent"></div>
             <h2 class="slide-title">Mục Tiêu Khóa Học</h2>
-            
-            <div class="highlight-box">
+
+            <div class="highlight-box" style="margin-bottom: 20px;">
                 <p style="font-size: 1rem; color: var(--text-dark); line-height: 1.8; font-weight: 500;">
                     Hoàn thành khóa học, học viên có đủ năng lực của một <strong>lập trình viên chuyên nghiệp</strong>, sẵn sàng tham gia trực tiếp vào các dự án phần mềm tại doanh nghiệp.
                 </p>
             </div>
 
-            <div class="content-section">
-                <div class="section-title">Kỹ năng đầu ra</div>
-                <div class="info-box">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                        <div>
-                            <span class="info-label"><i class="fa-brands fa-java"></i> Backend Java</span>
-                            <div class="info-content" style="font-size: 0.88rem;">Spring Boot · REST API · Security · Unit Test · OOP · Clean Code</div>
-                        </div>
-                        <div>
-                            <span class="info-label"><i class="fa-solid fa-laptop-code"></i> Frontend</span>
-                            <div class="info-content" style="font-size: 0.88rem;">ReactJS · TypeScript · Redux · Hooks · AI-Generated UI/UX</div>
-                        </div>
-                        <div>
-                            <span class="info-label"><i class="fa-solid fa-cloud"></i> DevOps & Cloud</span>
-                            <div class="info-content" style="font-size: 0.88rem;">Docker · CI/CD Pipeline · AWS / GCP / Azure · Domain & Deploy</div>
-                        </div>
-                        <div>
-                            <span class="info-label"><i class="fa-solid fa-robot"></i> AI-Native</span>
-                            <div class="info-content" style="font-size: 0.88rem;">Prompt Engineering · GitHub Copilot · Spring AI · Mock Interview với AI</div>
-                        </div>
+            <div class="section-title" style="margin-bottom: 14px;">Kỹ Năng Đầu Ra</div>
+
+            <div class="skill-grid-4">
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <div class="experience-icon" style="margin-bottom: 0;"><i class="fa-brands fa-java"></i></div>
+                        <span class="skill-card-title">Backend Java</span>
                     </div>
+                    <div class="skill-card-tags">Spring Boot · REST API · Security · Unit Test · OOP · Clean Code</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <div class="experience-icon" style="margin-bottom: 0;"><i class="fa-solid fa-laptop-code"></i></div>
+                        <span class="skill-card-title">Frontend</span>
+                    </div>
+                    <div class="skill-card-tags">ReactJS · TypeScript · Redux · Hooks · AI-Generated UI/UX</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <div class="experience-icon" style="margin-bottom: 0;"><i class="fa-solid fa-cloud"></i></div>
+                        <span class="skill-card-title">DevOps & Cloud</span>
+                    </div>
+                    <div class="skill-card-tags">Docker · CI/CD Pipeline · AWS / GCP / Azure · Domain & Deploy</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <div class="experience-icon" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); margin-bottom: 0;"><i class="fa-solid fa-robot"></i></div>
+                        <span class="skill-card-title">AI-Native</span>
+                    </div>
+                    <div class="skill-card-tags">Prompt Engineering · GitHub Copilot · Spring AI · Mock Interview với AI</div>
                 </div>
             </div>
         </div>
@@ -1164,20 +1284,55 @@
         <div class="slide">
             <div class="slide-accent"></div>
             <h2 class="slide-title">Nội Dung Khóa Học</h2>
-            
-            <div class="content-section">
-                <div class="section-title">6 Module · 13 tháng</div>
-                <ul class="module-list">
-                    <li><span><strong>Module 1</strong> · 2T — Nền tảng lập trình <span style="color: var(--text-light); font-size:0.82rem;">(JS, AI Tools, Git, Thuật toán)</span></span></li>
-                    <li><span><strong>Module 2</strong> · 3T — Lập trình ứng dụng với Java <span style="color: var(--text-light); font-size:0.82rem;">(OOP, DSA, Clean Code)</span></span></li>
-                    <li><span><strong>Module 3</strong> · 2T — Lập trình Web với Java <span style="color: var(--text-light); font-size:0.82rem;">(JSP, Servlet, MVC, MySQL)</span></span></li>
-                    <li><span><strong>Module 4</strong> · 2T — Spring Boot <span style="color: var(--text-light); font-size:0.82rem;">(REST API, Security, Testing, Deploy)</span></span></li>
-                    <li><span><strong>Module 5</strong> · 2T — Kỹ sư DevOps <span style="color: var(--text-light); font-size:0.82rem;">(Docker, CI/CD, Cloud AWS/GCP/Azure)</span></span></li>
-                    <li><span><strong>Module 6</strong> · 2T — Frontend với ReactJS <span style="color: var(--text-light); font-size:0.82rem;">(TypeScript, Redux, Hooks, AI-Generated UI)</span></span></li>
-                </ul>
+
+            <div class="section-title" style="margin-bottom: 14px;">6 Module · 13 tháng</div>
+
+            <div class="module-card-list">
+                <div class="module-card-item">
+                    <div class="module-num-badge">1</div>
+                    <div class="module-card-body">
+                        <div class="module-card-name">Nền Tảng Lập Trình <span class="module-duration">· 2 tháng</span></div>
+                        <div class="module-card-tech">JS · AI Tools · Git · Thuật toán</div>
+                    </div>
+                </div>
+                <div class="module-card-item">
+                    <div class="module-num-badge">2</div>
+                    <div class="module-card-body">
+                        <div class="module-card-name">Lập Trình Ứng Dụng với Java <span class="module-duration">· 3 tháng</span></div>
+                        <div class="module-card-tech">OOP · DSA · Clean Code</div>
+                    </div>
+                </div>
+                <div class="module-card-item">
+                    <div class="module-num-badge">3</div>
+                    <div class="module-card-body">
+                        <div class="module-card-name">Lập Trình Web với Java <span class="module-duration">· 2 tháng</span></div>
+                        <div class="module-card-tech">JSP · Servlet · MVC · MySQL</div>
+                    </div>
+                </div>
+                <div class="module-card-item">
+                    <div class="module-num-badge">4</div>
+                    <div class="module-card-body">
+                        <div class="module-card-name">Spring Boot <span class="module-duration">· 2 tháng</span></div>
+                        <div class="module-card-tech">REST API · Security · Testing · Deploy</div>
+                    </div>
+                </div>
+                <div class="module-card-item">
+                    <div class="module-num-badge">5</div>
+                    <div class="module-card-body">
+                        <div class="module-card-name">Kỹ Sư DevOps <span class="module-duration">· 2 tháng</span></div>
+                        <div class="module-card-tech">Docker · CI/CD · AWS / GCP / Azure</div>
+                    </div>
+                </div>
+                <div class="module-card-item">
+                    <div class="module-num-badge">6</div>
+                    <div class="module-card-body">
+                        <div class="module-card-name">Frontend với ReactJS <span class="module-duration">· 2 tháng</span></div>
+                        <div class="module-card-tech">TypeScript · Redux · Hooks · AI-Generated UI</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="highlight-box">
+            <div class="highlight-box" style="margin-top: 16px;">
                 <div style="display: flex; align-items: center; gap: 15px;">
                     <div class="icon-badge icon-badge-orange"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                     <div>
