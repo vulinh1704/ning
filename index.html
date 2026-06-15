@@ -752,6 +752,18 @@
             color: white;
         }
 
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 480px) {
             .slide {
                 padding: 12px 16px 72px;
@@ -844,7 +856,7 @@
             <!-- Experience -->
             <div class="content-section">
                 <div class="section-title">Kinh Nghiệm Làm Việc</div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+                <div class="experience-grid">
                     <div class="experience-item">
                         <div class="experience-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
                         <div class="experience-title">Instructor</div>
