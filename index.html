@@ -1144,20 +1144,6 @@
             </div>
 
             <div class="system-item">
-                <span class="system-label"><i class="fa-solid fa-chart-gantt"></i> Quản Lý Công Việc</span>
-                <div class="system-name">Trello Board</div>
-                <div style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 15px; line-height: 1.6;">
-                    Theo dõi tiến độ hoàn thành các bài tập, dự án và deadline
-                </div>
-                <div style="background: var(--bg-light); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-                    <span style="color: var(--accent); font-weight: 600;">→</span>
-                    <code style="font-family: 'JetBrains Mono', monospace; color: var(--primary); font-size: 0.85rem;">
-                        https://trello.com/
-                    </code>
-                </div>
-            </div>
-
-            <div class="system-item">
                 <span class="system-label"><i class="fa-solid fa-robot"></i> Công Cụ AI</span>
                 <div class="system-name">AI Hỗ Trợ Học Tập</div>
                 <div style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 15px; line-height: 1.6;">
@@ -1190,9 +1176,16 @@
                                 Kiểm tra <strong>email đã đăng ký tại CodeGym</strong> để nhận thông tin đăng nhập
                             </div>
                         </div>
-                        <img src="gemini-pro-email.jpg" alt="Mẫu email Gemini Pro"
-                             style="height: 52px; width: auto; border-radius: 6px; border: 1px solid rgba(66,133,244,0.25); object-fit: cover; flex-shrink: 0; cursor: zoom-in;"
-                             onclick="this.style.height = this.style.height === '52px' ? '160px' : '52px'; this.style.cursor = this.style.height === '160px' ? 'zoom-out' : 'zoom-in'">
+                        <div onclick="openImageModal('gemini-pro-email.jpg', 'Mẫu email nhận tài khoản Gemini Pro')"
+                             style="position: relative; flex-shrink: 0; cursor: pointer; border-radius: 8px; overflow: hidden; border: 1.5px solid rgba(66,133,244,0.35); box-shadow: 0 2px 8px rgba(66,133,244,0.15); transition: box-shadow 0.2s;"
+                             onmouseover="this.style.boxShadow='0 4px 16px rgba(66,133,244,0.35)'; this.querySelector('.zoom-hint').style.opacity='1'"
+                             onmouseout="this.style.boxShadow='0 2px 8px rgba(66,133,244,0.15)'; this.querySelector('.zoom-hint').style.opacity='0'">
+                            <img src="gemini-pro-email.jpg" alt="Mẫu email Gemini Pro"
+                                 style="height: 52px; width: auto; display: block; object-fit: cover;">
+                            <div class="zoom-hint" style="position: absolute; inset: 0; background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s; border-radius: 6px;">
+                                <i class="fa-solid fa-magnifying-glass-plus" style="color: white; font-size: 1.1rem;"></i>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- AI tham khảo thêm -->
@@ -1215,6 +1208,20 @@
                             </div>
                         </a>
                     </div>
+                </div>
+            </div>
+
+            <div class="system-item">
+                <span class="system-label"><i class="fa-solid fa-chart-gantt"></i> Quản Lý Công Việc</span>
+                <div class="system-name">Trello Board</div>
+                <div style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 15px; line-height: 1.6;">
+                    Theo dõi tiến độ hoàn thành các bài tập, dự án và deadline
+                </div>
+                <div style="background: var(--bg-light); padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
+                    <span style="color: var(--accent); font-weight: 600;">→</span>
+                    <code style="font-family: 'JetBrains Mono', monospace; color: var(--primary); font-size: 0.85rem;">
+                        https://trello.com/
+                    </code>
                 </div>
             </div>
 
@@ -1383,6 +1390,8 @@
             if (event.key === 'ArrowLeft') changeSlide(-1);
             if (event.key === 'ArrowRight') changeSlide(1);
             if (event.key === 'Escape') {
+                const modal = document.getElementById('imageModal');
+                if (modal && modal.style.display === 'flex') { closeImageModal(); return; }
                 const overlay = document.getElementById('menuOverlay');
                 if (overlay.classList.contains('open')) toggleMenu();
             }
@@ -1391,6 +1400,34 @@
         // Initialize — restore saved slide or start at 0
         const savedSlide = parseInt(localStorage.getItem('currentSlide')) || 0;
         showSlide(savedSlide);
+    </script>
+
+    <!-- Image Modal Lightbox -->
+    <div id="imageModal" onclick="closeImageModal()"
+         style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.82); align-items:center; justify-content:center; flex-direction:column; gap:16px; cursor:zoom-out; animation:fadeIn 0.18s ease;">
+        <div onclick="event.stopPropagation()" style="position:relative; max-width:90vw; max-height:85vh;">
+            <img id="imageModalImg" src="" alt=""
+                 style="max-width:90vw; max-height:80vh; border-radius:10px; box-shadow:0 8px 48px rgba(0,0,0,0.7); display:block; object-fit:contain;">
+            <button onclick="closeImageModal()"
+                    style="position:absolute; top:-14px; right:-14px; width:32px; height:32px; border-radius:50%; background:#fff; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(0,0,0,0.3); font-size:0.9rem; color:#333;">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div id="imageModalCaption" style="color:rgba(255,255,255,0.75); font-family:'Be Vietnam Pro',sans-serif; font-size:0.82rem; letter-spacing:0.3px;"></div>
+    </div>
+    <style>
+        @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    </style>
+    <script>
+        function openImageModal(src, caption) {
+            const modal = document.getElementById('imageModal');
+            document.getElementById('imageModalImg').src = src;
+            document.getElementById('imageModalCaption').textContent = caption || '';
+            modal.style.display = 'flex';
+        }
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
     </script>
 </body>
 </html>
