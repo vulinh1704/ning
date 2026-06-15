@@ -88,6 +88,24 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Slide sticky header */
+        .slide-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: var(--bg-light);
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+        }
+
+        .slide-header .slide-accent {
+            margin-bottom: 10px;
+        }
+
+        .slide-header .slide-title {
+            margin-bottom: 0;
+        }
+
         /* Slide Title Styles */
         .slide-title {
             font-family: 'Be Vietnam Pro', sans-serif;
@@ -1554,6 +1572,19 @@
                 else changeSlide(-1);
             }
         }, { passive: true });
+
+        // Wrap slide-accent + slide-title into sticky .slide-header
+        document.querySelectorAll('.slide:not(.cover-slide)').forEach(function(slide) {
+            const accent = slide.querySelector('.slide-accent');
+            const title = slide.querySelector('.slide-title');
+            if (accent && title) {
+                const header = document.createElement('div');
+                header.className = 'slide-header';
+                slide.insertBefore(header, accent);
+                header.appendChild(accent);
+                header.appendChild(title);
+            }
+        });
 
         // Initialize — restore saved slide or start at 0
         const savedSlide = parseInt(localStorage.getItem('currentSlide')) || 0;
