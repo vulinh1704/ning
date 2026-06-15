@@ -6,6 +6,7 @@
     <title>AI-Native Java Web Fullstack Bootcamp</title>
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyfeRdnmHcuT0yiZZww9wOURKY9EWhZKoSOSQO8C44-A&s=10" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -257,8 +258,17 @@
         }
 
         .experience-icon {
-            font-size: 1.3rem;
-            margin-bottom: 6px;
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary) 0%, #2d3e9e 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(31,46,115,0.2);
         }
 
         .experience-title {
@@ -334,9 +344,34 @@
         }
 
         .rule-icon {
-            font-size: 1.6rem;
-            margin-bottom: 8px;
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            color: white;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(255,107,53,0.25);
         }
+
+        .icon-badge {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .icon-badge-blue { background: linear-gradient(135deg, var(--primary), #2d3e9e); box-shadow: 0 3px 8px rgba(31,46,115,0.2); }
+        .icon-badge-orange { background: linear-gradient(135deg, var(--accent), var(--accent-dark)); box-shadow: 0 3px 8px rgba(255,107,53,0.2); }
+        .icon-badge-green { background: linear-gradient(135deg, #10B981, #059669); box-shadow: 0 3px 8px rgba(16,185,129,0.2); }
 
         .rule-title {
             font-weight: 700;
@@ -761,9 +796,9 @@
                 <h1 class="cover-title">ĐỊNH HƯỚNG HỌC TẬP</h1>
 
                 <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 28px; flex-wrap: wrap;">
-                    <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.88);">☕ Java Web</span>
-                    <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.88);">🤖 AI-Native</span>
-                    <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.88);">🔗 Backend</span>
+                    <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.88);"><i class="fa-brands fa-java"></i> Java Web</span>
+                    <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.88);"><i class="fa-solid fa-robot"></i> AI-Native</span>
+                    <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); padding: 5px 14px; border-radius: 20px; font-size: 0.78rem; color: rgba(255,255,255,0.88);"><i class="fa-solid fa-server"></i> Backend</span>
                 </div>
 
                 <div class="cover-date" id="launchDate">CodeGym, Ngày 15 Tháng 6 Năm 2026</div>
@@ -779,29 +814,29 @@
                 <img src="image.png" alt="Trương Đăng Vũ Linh"
                      style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); box-shadow: 0 4px 12px rgba(255,107,53,0.25); filter: brightness(1.15) contrast(1.05); flex-shrink: 0;">
                 <div>
-                    <span class="info-label" style="font-size: 1rem; margin-bottom: 6px;">👤 Họ và tên</span>
+                    <span class="info-label" style="font-size: 1rem; margin-bottom: 6px;"><i class="fa-solid fa-user"></i> Họ và tên</span>
                     <div class="info-content" style="font-size: 1.6rem; font-weight: 800; color: var(--primary);"><strong>Trương Đăng Vũ Linh</strong></div>
                 </div>
             </div>
 
             <div class="two-column">
                 <div class="info-box">
-                    <span class="info-label">📞 Số điện thoại</span>
+                    <span class="info-label"><i class="fa-solid fa-phone"></i> Số điện thoại</span>
                     <div class="info-content"><strong>098 300 423</strong></div>
                 </div>
                 <div class="info-box">
-                    <span class="info-label">✉️ Email</span>
+                    <span class="info-label"><i class="fa-solid fa-envelope"></i> Email</span>
                     <div class="info-content"><strong>linh.truong2@codegym.vn</strong></div>
                 </div>
             </div>
 
             <div class="two-column">
                 <div class="info-box">
-                    <span class="info-label">🎂 Năm sinh</span>
+                    <span class="info-label"><i class="fa-solid fa-calendar"></i> Năm sinh</span>
                     <div class="info-content"><strong>2001</strong></div>
                 </div>
                 <div class="info-box">
-                    <span class="info-label">⭐ Kinh nghiệm</span>
+                    <span class="info-label"><i class="fa-solid fa-star"></i> Kinh nghiệm</span>
                     <div class="info-content"><strong>5 năm</strong> trong lập trình & giáo dục</div>
                 </div>
             </div>
@@ -811,17 +846,17 @@
                 <div class="section-title">Kinh Nghiệm Làm Việc</div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
                     <div class="experience-item">
-                        <div class="experience-icon">📚</div>
+                        <div class="experience-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
                         <div class="experience-title">Instructor</div>
                         <div class="experience-detail">4+ năm giảng dạy Fullstack tại môi trường chuyên nghiệp — Node.js, Java Spring Boot, ReactJS, Angular. Đào tạo hàng trăm học viên từ nền tảng đến thực chiến.</div>
                     </div>
                     <div class="experience-item">
-                        <div class="experience-icon">💻</div>
+                        <div class="experience-icon"><i class="fa-solid fa-code"></i></div>
                         <div class="experience-title">Software Engineer</div>
                         <div class="experience-detail">5+ năm phát triển phần mềm doanh nghiệp — thiết kế kiến trúc hệ thống, triển khai production cho Blockchain, Healthcare, LMS phục vụ thị trường quốc tế.</div>
                     </div>
                     <div class="experience-item">
-                        <div class="experience-icon">🤖</div>
+                        <div class="experience-icon"><i class="fa-solid fa-microchip"></i></div>
                         <div class="experience-title">AI Engineer</div>
                         <div class="experience-detail">Xây dựng AI Agent, tích hợp LLM (GPT, Claude, Gemini) vào luồng nghiệp vụ, thiết kế hệ thống RAG và tự động hóa quy trình bằng công nghệ AI.</div>
                     </div>
@@ -835,29 +870,29 @@
             <h2 class="slide-title">Nơi Công Tác</h2>
             
             <div class="experience-item">
-                <div class="experience-icon">🏢</div>
+                <div class="experience-icon"><i class="fa-solid fa-building"></i></div>
                 <div class="experience-title">PixiTech — Senior Software Engineer</div>
                 <div class="experience-detail">
                     <strong>Các dự án phát triển:</strong>
                     <ul style="margin-left: 20px; margin-top: 12px; color: var(--text-light); line-height: 1.8;">
-                        <li>🔗 Blockchain Technology</li>
-                        <li>📚 LMS (Learning Management System)</li>
-                        <li>🏥 Hệ thống Healthcare</li>
+                        <li>Blockchain Technology</li>
+                        <li>LMS (Learning Management System)</li>
+                        <li>Hệ thống Healthcare</li>
                     </ul>
                     <div style="margin-top: 15px; color: var(--accent); font-weight: 600; font-size: 0.95rem;">
-                        ✈️ Phục vụ: Singapore • Úc • Malaysia • ...
+                        <i class="fa-solid fa-globe" style="margin-right: 6px;"></i>Phục vụ: Singapore · Úc · Malaysia · ...
                     </div>
                 </div>
             </div>
 
             <div class="experience-item">
-                <div class="experience-icon">🎓</div>
+                <div class="experience-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                 <div class="experience-title">CodeGym (Giảng viên Parttime)</div>
                 <div class="experience-detail">
                     <strong>Giảng dạy các khóa A.I-NATIVE BOOTCAMP:</strong>
                     <ul style="margin-left: 20px; margin-top: 12px; color: var(--text-light); line-height: 1.8;">
-                        <li>⚙️ Backend Development</li>
-                        <li>🎨 Frontend Development</li>
+                        <li>Backend Development</li>
+                        <li>Frontend Development</li>
                     </ul>
                 </div>
             </div>
@@ -879,19 +914,19 @@
                 <div class="info-box">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                         <div>
-                            <span class="info-label">🤖 AI-Native</span>
+                            <span class="info-label"><i class="fa-solid fa-robot"></i> AI-Native</span>
                             <div class="info-content" style="font-size: 0.95rem;">Sử dụng công nghệ AI làm công cụ hỗ trợ học tập và phát triển</div>
                         </div>
                         <div>
-                            <span class="info-label">☕ Java Web</span>
+                            <span class="info-label"><i class="fa-brands fa-java"></i> Java Web</span>
                             <div class="info-content" style="font-size: 0.95rem;">Lập trình web backend sử dụng ngôn ngữ Java</div>
                         </div>
                         <div>
-                            <span class="info-label">🔗 Fullstack</span>
+                            <span class="info-label"><i class="fa-solid fa-layer-group"></i> Fullstack</span>
                             <div class="info-content" style="font-size: 0.95rem;">Kết hợp frontend (giao diện) + backend (logic)</div>
                         </div>
                         <div>
-                            <span class="info-label">🎯 Bootcamp</span>
+                            <span class="info-label"><i class="fa-solid fa-bullseye"></i> Bootcamp</span>
                             <div class="info-content" style="font-size: 0.95rem;">Khóa học cấp tốc, thực hành nhiều</div>
                         </div>
                     </div>
@@ -917,7 +952,7 @@
 
             <div class="highlight-box" style="margin-top: 30px;">
                 <div style="display: flex; align-items: center; gap: 15px;">
-                    <div style="font-size: 1.8rem;">✨</div>
+                    <div class="icon-badge icon-badge-orange"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                     <div>
                         <strong style="color: var(--accent-dark); font-size: 1.1rem;">Tất cả các module đều có hỗ trợ mạnh mẽ từ AI</strong>
                         <div style="font-size: 0.9rem; color: var(--text-dark); margin-top: 8px;">Giúp bạn học tập hiệu quả và giải quyết vấn đề nhanh chóng</div>
@@ -933,7 +968,7 @@
             
             <div class="highlight-box">
                 <div style="display: flex; align-items: center; gap: 15px;">
-                    <div style="font-size: 1.8rem;">🚀</div>
+                    <div class="icon-badge icon-badge-blue"><i class="fa-solid fa-rocket"></i></div>
                     <div>
                         <strong style="color: var(--accent-dark); font-size: 1.05rem;">Điểm khởi đầu của hành trình</strong>
                         <div style="font-size: 0.9rem; color: var(--text-dark); margin-top: 5px;">Tiếp cận với lập trình cơ bản</div>
@@ -952,7 +987,7 @@
             </div>
 
             <div class="info-box">
-                <span class="info-label">📚 Các khái niệm cần học</span>
+                <span class="info-label"><i class="fa-solid fa-book-open"></i> Các khái niệm cần học</span>
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px;">
                     <div style="color: var(--text-dark); font-weight: 500;">• Biến & Kiểu dữ liệu</div>
                     <div style="color: var(--text-dark); font-weight: 500;">• Mảng & Collection</div>
@@ -965,7 +1000,7 @@
 
             <div class="highlight-box">
                 <div style="display: flex; gap: 12px; align-items: flex-start;">
-                    <div style="font-size: 1.5rem;">💡</div>
+                    <div class="icon-badge icon-badge-orange"><i class="fa-solid fa-lightbulb"></i></div>
                     <div>
                         <strong style="color: var(--accent-dark);">Lưu ý quan trọng:</strong>
                         <div style="color: var(--text-dark); margin-top: 8px;">AI là công cụ hỗ trợ, nhưng bạn cần <strong>tư duy, hiểu và đánh giá</strong> kết quả từ AI</div>
@@ -981,7 +1016,7 @@
             
             <div class="rules-grid">
                 <div class="rule-card">
-                    <div class="rule-icon">💬</div>
+                    <div class="rule-icon"><i class="fa-solid fa-comments"></i></div>
                     <div class="rule-title">Ứng Dụng Giao Tiếp</div>
                     <div class="rule-content">
                         <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 10px;">
@@ -996,7 +1031,7 @@
                     </div>
                 </div>
                 <div class="rule-card">
-                    <div class="rule-icon">⏰</div>
+                    <div class="rule-icon"><i class="fa-solid fa-clock"></i></div>
                     <div class="rule-title">Giờ Học</div>
                     <div class="rule-content">
                         <strong style="color: var(--primary);">19:30 - 21:30</strong>
@@ -1004,7 +1039,7 @@
                     </div>
                 </div>
                 <div class="rule-card">
-                    <div class="rule-icon">🙋</div>
+                    <div class="rule-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
                     <div class="rule-title">Vắng / Muộn</div>
                     <div class="rule-content">
                         <strong style="color: var(--primary);">Xin phép</strong>
@@ -1012,7 +1047,7 @@
                     </div>
                 </div>
                 <div class="rule-card">
-                    <div class="rule-icon">💬</div>
+                    <div class="rule-icon"><i class="fa-solid fa-headset"></i></div>
                     <div class="rule-title">Hỗ Trợ & Hỏi Đáp</div>
                     <div class="rule-content">
                         <strong style="color: var(--primary);">Trao đổi tự do</strong>
@@ -1020,7 +1055,7 @@
                     </div>
                 </div>
                 <div class="rule-card">
-                    <div class="rule-icon">📚</div>
+                    <div class="rule-icon"><i class="fa-solid fa-file-lines"></i></div>
                     <div class="rule-title">Sau Mỗi Buổi</div>
                     <div class="rule-content">
                         <strong style="color: var(--primary);">Gửi tài liệu</strong>
@@ -1028,7 +1063,7 @@
                     </div>
                 </div>
                 <div class="rule-card">
-                    <div class="rule-icon">✅</div>
+                    <div class="rule-icon"><i class="fa-solid fa-circle-check"></i></div>
                     <div class="rule-title">Hoàn Thành Bài Tập</div>
                     <div class="rule-content">
                         <strong style="color: var(--primary);">≥ 80%</strong>
@@ -1039,7 +1074,7 @@
 
             <div class="highlight-box" style="margin-top: 25px;">
                 <div style="display: flex; gap: 12px; align-items: flex-start;">
-                    <div style="font-size: 1.5rem;">📋</div>
+                    <div class="icon-badge icon-badge-blue"><i class="fa-solid fa-clipboard-list"></i></div>
                     <div>
                         <strong style="color: var(--accent-dark);">Bài Kiểm Tra</strong>
                         <div style="color: var(--text-dark); margin-top: 8px;">Sẽ được tiến hành sau các bài học quan trọng để đánh giá kiến thức</div>
@@ -1054,7 +1089,7 @@
             <h2 class="slide-title">Hướng Dẫn Hệ Thống</h2>
             
             <div class="system-item">
-                <span class="system-label">📚 Hệ Thống Học Tập</span>
+                <span class="system-label"><i class="fa-solid fa-graduation-cap"></i> Hệ Thống Học Tập</span>
                 <div class="system-name">CodeGym Learning Platform</div>
                 <div style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 15px; line-height: 1.6;">
                     Nền tảng chính để học tập, xem bài giảng, nộp bài tập và theo dõi tiến độ
@@ -1068,7 +1103,7 @@
             </div>
 
             <div class="system-item">
-                <span class="system-label">📊 Quản Lý Công Việc</span>
+                <span class="system-label"><i class="fa-solid fa-chart-gantt"></i> Quản Lý Công Việc</span>
                 <div class="system-name">Trello Board</div>
                 <div style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 15px; line-height: 1.6;">
                     Theo dõi tiến độ hoàn thành các bài tập, dự án và deadline
@@ -1082,7 +1117,7 @@
             </div>
 
             <div class="system-item">
-                <span class="system-label">🤖 Công Cụ AI</span>
+                <span class="system-label"><i class="fa-solid fa-robot"></i> Công Cụ AI</span>
                 <div class="system-name">AI Hỗ Trợ Học Tập</div>
                 <div style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 15px; line-height: 1.6;">
                     Sử dụng AI để giải thích khái niệm, debug code và hỗ trợ học tập hiệu quả
@@ -1120,7 +1155,7 @@
 
             <div class="highlight-box">
                 <div style="display: flex; gap: 12px; align-items: flex-start;">
-                    <div style="font-size: 1.5rem;">🎯</div>
+                    <div class="icon-badge icon-badge-orange"><i class="fa-solid fa-bullseye"></i></div>
                     <div>
                         <strong style="color: var(--accent-dark);">Lưu ý Quan Trọng</strong>
                         <div style="color: var(--text-dark); margin-top: 8px;">Kiểm tra thường xuyên những nền tảng này để không bỏ lỡ thông tin, bài giảng, hoặc deadline quan trọng</div>
@@ -1134,7 +1169,9 @@
             <div class="cover-content">
 
                 <!-- Icon -->
-                <div style="font-size: 3.5rem; margin-bottom: 20px; filter: drop-shadow(0 4px 12px rgba(255,107,53,0.4));">🚀</div>
+                <div style="width: 72px; height: 72px; background: linear-gradient(135deg, var(--accent), var(--accent-dark)); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 8px 24px rgba(255,107,53,0.4); font-size: 1.8rem; color: white;">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
 
                 <!-- Title -->
                 <h1 class="cover-title" style="margin-bottom: 16px;">Chúc Bạn Học Tốt!</h1>
@@ -1155,17 +1192,17 @@
                 <!-- Motivational cards -->
                 <div style="display: flex; gap: 16px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap;">
                     <div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(8px); padding: 14px 20px; border-radius: 14px; min-width: 130px;">
-                        <div style="font-size: 1.6rem; margin-bottom: 6px;">💡</div>
+                        <div style="font-size: 1.4rem; margin-bottom: 8px; color: rgba(255,255,255,0.9);"><i class="fa-solid fa-lightbulb"></i></div>
                         <div style="font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.9); text-transform: uppercase; letter-spacing: 0.5px;">Tư duy</div>
                         <div style="font-size: 0.72rem; color: rgba(255,255,255,0.55); margin-top: 3px;">Luôn đặt câu hỏi</div>
                     </div>
                     <div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(8px); padding: 14px 20px; border-radius: 14px; min-width: 130px;">
-                        <div style="font-size: 1.6rem; margin-bottom: 6px;">🔥</div>
+                        <div style="font-size: 1.4rem; margin-bottom: 8px; color: rgba(255,255,255,0.9);"><i class="fa-solid fa-fire-flame-curved"></i></div>
                         <div style="font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.9); text-transform: uppercase; letter-spacing: 0.5px;">Kiên trì</div>
                         <div style="font-size: 0.72rem; color: rgba(255,255,255,0.55); margin-top: 3px;">Mỗi ngày một chút</div>
                     </div>
                     <div style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(8px); padding: 14px 20px; border-radius: 14px; min-width: 130px;">
-                        <div style="font-size: 1.6rem; margin-bottom: 6px;">🤝</div>
+                        <div style="font-size: 1.4rem; margin-bottom: 8px; color: rgba(255,255,255,0.9);"><i class="fa-solid fa-handshake"></i></div>
                         <div style="font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.9); text-transform: uppercase; letter-spacing: 0.5px;">Hợp tác</div>
                         <div style="font-size: 0.72rem; color: rgba(255,255,255,0.55); margin-top: 3px;">Học cùng nhau</div>
                     </div>
@@ -1184,7 +1221,7 @@
     <div class="menu-overlay" id="menuOverlay" onclick="closeMenuOnBackdrop(event)">
         <div class="menu-panel">
             <div class="menu-header">
-                <span class="menu-header-title">📋 MỤC LỤC</span>
+                <span class="menu-header-title"><i class="fa-solid fa-list" style="margin-right: 6px;"></i>MỤC LỤC</span>
                 <button class="menu-close" onclick="toggleMenu()">✕</button>
             </div>
             <div id="menuList"></div>
@@ -1193,7 +1230,7 @@
 
     <!-- Navigation -->
     <div class="navigation">
-        <button class="menu-btn" onclick="toggleMenu()" title="Mục lục">☰</button>
+        <button class="menu-btn" onclick="toggleMenu()" title="Mục lục"><i class="fa-solid fa-bars"></i></button>
         <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">❮</button>
         <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">9</span></span>
         <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">❯</button>
