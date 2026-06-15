@@ -72,6 +72,7 @@
             padding: 30px 60px 90px;
             animation: fadeIn 0.5s ease-in-out;
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         .slide.active {
@@ -1533,6 +1534,34 @@
                 if (overlay.classList.contains('open')) toggleMenu();
             }
         });
+
+        // Touch swipe navigation
+        let touchStartX = 0, touchStartY = 0;
+
+        document.querySelector('.slide-container').addEventListener('touchstart', function(e) {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        document.querySelector('.slide-container').addEventListener('touchend', function(e) {
+            const dx = e.changedTouches[0].clientX - touchStartX;
+            const dy = e.changedTouches[0].clientY - touchStartY;
+            const absDx = Math.abs(dx), absDy = Math.abs(dy);
+            const SWIPE_THRESHOLD = 50;
+
+            if (absDx > absDy && absDx > SWIPE_THRESHOLD) {
+                // Horizontal swipe → change slide
+                if (dx < 0) changeSlide(1);
+                else changeSlide(-1);
+            } else if (absDy > absDx && absDy > SWIPE_THRESHOLD) {
+                // Vertical swipe → change slide only at scroll boundary
+                const active = document.querySelector('.slide.active');
+                const atTop = active.scrollTop <= 2;
+                const atBottom = active.scrollTop + active.clientHeight >= active.scrollHeight - 2;
+                if (dy < 0 && atBottom) changeSlide(1);   // swipe up at bottom → next
+                if (dy > 0 && atTop) changeSlide(-1);     // swipe down at top → prev
+            }
+        }, { passive: true });
 
         // Initialize — restore saved slide or start at 0
         const savedSlide = parseInt(localStorage.getItem('currentSlide')) || 0;
